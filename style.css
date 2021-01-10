@@ -1,0 +1,943 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Clan-Medium Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Clan-Medium Medium'), url('clan-med-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Clanpro-News';
+    font-style: normal;
+    src: local('Clanpro'), url('clan-med-webfont.woff') format('woff');
+}
+
+/*    Cookie font*/
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+
+
+/*------------------ TEKSTELEMENTEN ------------------*/
+
+h1 {
+    font-family: 'Clanpro-News', Arial, sans-serif;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.4rem;
+    background-color: #b9dcd2;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+h2 {
+    font-family: 'Clan-Medium Medium', Clanotnews, sans-serif;
+    color: #333;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 15px 0 25px 0;
+}
+
+h3 {
+    font-family: 'Clanpro-News', Bold, sans-serif;
+    color: #333333;
+    font-size: 1.3em;
+    margin: 5px 0 5px 0;
+}
+
+
+h4 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    color: #333333;
+    line-height: 1.3em;
+}
+
+
+/*---------------------------------------------------  HEADER ----------------------------------------------*/
+
+/*---------- winkelmand -----------*/
+
+.shopping_cart {
+    width: 2em;
+    height: 2em;
+    margin: 10px 15px 0 0;
+}
+
+.winkelwagen_clicked {
+    display: none;
+}
+
+/*---------- boven nav met hamburger, logo en winkelwagen -----------*/
+
+.logo {
+    margin-top: 7px;
+    width: 185px;
+    transition: .5s;
+}
+
+.nav_menuorder {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 1031px) {
+    .logo {
+        width: 350px;
+    }
+
+    .nav_menuorder {
+        width: 950px;
+        margin: auto;
+    }
+}
+
+main {
+    transform: translateX(0%);
+    transition: .3s;
+}
+
+main.verschuiven {
+    transform: translateX(100%);
+}
+
+
+/*---------- winkelmand -----------*/
+
+nav:nth-child(2) ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 375px;
+    background-color: white;
+}
+
+nav:nth-child(2) ul li {
+    list-style: none;
+    text-align: center;
+    margin: 22px;
+    width: 80px;
+}
+
+nav:nth-child(2) ul li a {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    color: #333333;
+    line-height: 1.3em;
+}
+
+.menu {
+    position: fixed;
+    transform: translateX(-150%);
+    transition: .5s;
+    width: 375px;
+    height: 100vh;
+}
+
+.menu.tevoorschijn {
+    position: fixed;
+    transform: translateX(0%);
+}
+
+
+/*---------- hamburger -----------*/
+
+.hamburger {
+    margin: 10px 0 0 15px;
+    transition: .6s;
+}
+
+@media only screen and (min-width: 1031px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+.hamburger_line1 {
+    height: .5rem;
+    border-bottom: 2px solid #e40350;
+    width: 1.5rem;
+    transition: .5s;
+}
+
+.hamburger_line1.yay {
+    border-bottom: 2px solid #e40350;
+    transform: rotate(45deg);
+    position: absolute;
+    margin: 8px 0 0 3px;
+}
+
+.hamburger_line2 {
+    visibility: visible;
+    height: .5rem;
+    border-bottom: 2px solid #e40350;
+    width: 1.5rem;
+}
+
+.hamburger_line2.yay {
+    visibility: hidden;
+}
+
+.hamburger_line3 {
+    height: .5rem;
+    border-bottom: 2px solid #e40350;
+    width: 1.5rem;
+    transition: .5s;
+}
+
+.hamburger_line3.yay {
+    border-bottom: 2px solid #e40350;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+
+/*---------- zoekbalk -----------*/
+
+.zoekbalk input {
+    width: 95vw;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+@media only screen and (min-width: 1031px) {
+    .zoekbalk input {
+        width: 20vw;
+    }
+}
+
+.nav_catorder {
+    background-color: #b9dcd2;
+    padding: 8px 15px 8px 15px;
+    width: 100vw;
+    transform: translateX(0%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*---------- MENU MET LETTERS -----------*/
+
+.navMenu2 {
+    visibility: hidden;
+    height: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media only screen and (min-width: 1031px) {
+    .navMenu2 {
+        visibility: visible;
+        height: auto;
+    }
+}
+
+.navMenu2 li {
+    text-decoration: none;
+    list-style: none;
+    font-family: Clanpro Bold, Arial, sans-serif;
+    font-weight: 800;
+    color: #333;
+    font-size: .9rem;
+    text-transform: uppercase;
+    margin: auto;
+    padding: 10px;
+}
+
+.navMenu2 li:hover {
+    background-color: #efefef;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/*---------------------------------------------------  MAIN ----------------------------------------------*/
+
+
+main > div > img {
+    display: none;
+}
+
+@media only screen and (min-width: 830px) {
+    main > div {
+        width: 90vw;
+        margin: auto;
+    }
+
+    main > div > img {
+        display: block;
+        width: 100%;
+        align-content: center;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    main > div {
+        width: 950px;
+    }
+}
+
+.productbeschrijving {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.productbeschrijving > img {
+    /*    display: block;*/
+    max-width: 450px;
+}
+
+.productbeschrijving > p {
+    max-width: 450px;
+}
+
+
+
+
+
+@media only screen and (min-width: 900px) {
+    .product_opties {
+    width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .product_opties {
+    width: 50%;
+    }
+}
+
+
+/*---------------------------------------------------  HOMEPAGE ----------------------------------------------*/
+
+
+/*---------- categorie foto's -----------*/
+
+.hp_fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.hp_fotos img {
+    width: 180px;
+    margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 940px) {
+
+    .hp_fotos img {
+        width: 210px;
+        margin: 20px 0 0 0;
+    }
+}
+
+/*------------------------------------*/
+
+/*---------- producten -----------*/
+
+.tekst_prijs {
+    font-weight: 600;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0.5em 0 0.8em 0;
+}
+
+.products {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 30px 0;
+}
+
+main > div > a {
+    font-family: clanotnews, arial, sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: #ff6279;
+    padding: 10px 17px;
+    margin-left: 15%;
+}
+
+@media only screen and (min-width: 600px) {
+    main > div > a {
+        margin-left: 35%;
+    }
+}
+
+main > div > a:hover {
+    text-decoration: underline;
+}
+
+.products a {
+    text-decoration: none;
+    text-align: center;
+}
+
+section article button {
+    width: 150px;
+    background-color: #b9dcd2;
+    border: none;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 30px;
+    display: block;
+    margin: auto;
+    transition: .2s;
+    border-radius: 5px;
+}
+
+section article button:hover {
+    background-color: #ff6279;
+    cursor: pointer;
+    width: 170px;
+}
+
+main > div > section > article {
+    padding: 0 17px 20px 17px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: .1s;
+}
+
+main > div > section > article:hover {
+    border: 2px solid #FFB1BC;
+    border-radius: 5px;
+
+}
+
+
+
+/*-----------------------------------------------*/
+
+/*---------- stukje tekst over de site -----------*/
+.overBedankjes {
+    margin: 60px 0;
+}
+
+@media only screen and (max-width: 840px) {
+    .overBedankjes {
+        margin: 0 15px;
+        padding: 60px 0;
+    }
+}
+
+main section:last-of-type p {
+    margin: 15px 0;
+}
+
+main section:last-of-type a {
+    text-decoration: none;
+    color: #ff6279;
+}
+
+main section:last-of-type a:hover {
+    text-decoration: underline;
+}
+
+main section:last-of-type p:last-of-type {
+    font-family: 'Cookie', cursive;
+    ;
+    font-size: 2.5em;
+}
+
+/*------------------------------------*/
+
+
+
+/*---------------------------------------------------  DETAILPAGE ----------------------------------------------*/
+
+
+/*------------------ DETAILPAGINA ------------------*/
+
+.pagewidth > a:first-of-type {
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.pagewidth > a:last-of-type {
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+
+.productbeschrijving > img {
+    width: 100%;
+}
+
+form > select {
+    background-color: #ffffff;
+    padding: 8px 15px 8px 15px;
+    width: 90vw;
+    max-width: 500px;
+    margin: 5px 0 15px 0;
+    display: block;
+}
+
+.pagewidth {
+    width: 90vw;
+    margin: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+    .pagewidth {
+        width: 950px;
+    }
+}
+
+.detail_ontwerp {
+    width: 200px;
+}
+
+.pagewidth form input:last-child {
+    color: white;
+    font-size: 1.3em;
+    background-color: #f9bbc9;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 80px;
+    border: none;
+}
+
+.pagewidth form input:last-child:hover {
+    background-color: #e40350;
+    cursor: pointer;
+}
+
+.pagewidth > form {
+    margin: 30px 0;
+}
+
+form label {
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    color: #333333;
+    line-height: 1.3em;
+}
+
+.ontwerpen {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: 0 0 15px 0;
+    width: 90vw;
+
+    font-family: Arial, sans-serif;
+    color: #333333;
+    line-height: 1.3em;
+}
+
+@media only screen and (min-width: 1024px) {
+    .ontwerpen {
+        width: 950px;
+    }
+}
+
+.ontwerpen section {
+    margin: 0 5px;
+}
+
+.aantal_prijs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.aantal_prijs p {
+    font-weight: 600;
+    font-size: 1.5em;
+    margin: 0 0 0 80px;
+    position: absolute;
+    margin: 25px 0 0 120px;
+}
+
+.pagewidth > a {
+    font-family: Arial, sans-serif;
+    font-weight: 200;
+    color: white;
+    line-height: 1.3em;
+}
+
+
+
+
+
+
+
+/*---------------------------------------------------  FOOTER ----------------------------------------------*/
+
+/*---------- algemeen -----------*/
+
+footer {
+    bottom: 0;
+    width: 100vw;
+    background-color: #b9dcd2;
+    padding: 15px 0;
+}
+
+footer > section {
+    display: none;
+}
+
+@media only screen and (min-width: 850px) {
+    footer > section {
+        visibility: visible;
+        bottom: 0;
+    }
+}
+
+
+@media only screen and (min-width: 850px) {
+    footer > section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70vw;
+        margin: auto;
+    }
+
+    footer h3 {
+        font-family: Clan-Medium, Clanpro, Arial, sans-serif;
+        color: #555;
+        font-size: 1em;
+        padding: 8px 0;
+        margin-bottom: 10px;
+    }
+
+    footer ul {
+        list-style-type: none;
+        font-family: Arial, sans-serif;
+        font-size: .8rem;
+        color: #555;
+        line-height: 1.5em;
+    }
+
+    footer ul li a {
+        color: #555;
+    }
+
+    footer ul li a:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+    /*---------- zakelijke roze link -----------*/
+
+    footer section article:nth-child(2) ul li:last-of-type {
+        padding-top: 10px;
+    }
+
+
+    footer section article:nth-child(2) ul li:last-of-type a:hover {
+        color: #ff6279;
+        text-decoration: underline;
+    }
+
+    /*---------- laatste article -----------*/
+
+    footer section article:nth-child(3) ul li a {
+        padding-top: 10px;
+    }
+
+
+    footer section article:nth-child(3) ul li a:hover {
+        color: #ff6279;
+        text-decoration: underline;
+    }
+
+    footer section article:nth-child(3) ul li:nth-child(3) {
+        padding: 10px 0;
+    }
+
+    footer section article:nth-child(3) img {
+        width: 300px;
+        margin-top: 15px;
+    }
+}
+
+/*---------- afbeelding social media -----------*/
+
+footer img {
+    display: block;
+    margin: auto;
+    width: 90vw;
+}
+
+@media only screen and (min-width: 500px) {
+    footer img {
+        width: 350px;
+    }
+}
+
+@media only screen and (min-width: 850px) {
+    footer img {
+        margin: 0;
+    }
+}
+
+
+/*---------- accordion -----------*/
+
+footer > div {
+    display: none;
+}
+
+@media only screen and (max-width: 850px) {
+    footer > div {
+        display: block;
+        margin: auto;
+    }
+}
+
+footer > div li a {
+    font-family: Arial, sans-serif;
+    font-size: .8rem;
+    color: #555;
+    line-height: 1.5em;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+
+    /*---------- 1 -----------*/
+    .accor1 {
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+        width: 90vw;
+        height: 40px;
+        background-color: #555;
+        border: none;
+        font-family: Clan-Medium, Clanpro, Arial, sans-serif;
+        color: white;
+        font-size: 1em;
+        padding: 8px 0;
+    }
+
+    .accor1_items {
+        width: 90vw;
+        margin: auto;
+        list-style-type: none;
+        height: 0px;
+        visibility: hidden;
+        transition: .3s;
+    }
+
+    .accor1_items.show_items {
+        height: 180px;
+        visibility: visible;
+    }
+
+    /*---------- 2 -----------*/
+    .accor2 {
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+        width: 90vw;
+        height: 40px;
+        background-color: #555;
+        border: none;
+        font-family: Clan-Medium, Clanpro, Arial, sans-serif;
+        color: white;
+        font-size: 1em;
+        padding: 8px 0;
+    }
+
+    .accor2_items {
+        width: 90vw;
+        margin: auto;
+        list-style-type: none;
+        height: 0px;
+        visibility: hidden;
+        transition: .3s;
+    }
+
+    .accor2_items.show_items {
+        height: 150px;
+        visibility: visible;
+    }
+
+    /*---------- 3 -----------*/
+    .accor3 {
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+        width: 90vw;
+        height: 40px;
+        background-color: #555;
+        border: none;
+        font-family: Clan-Medium, Clanpro, Arial, sans-serif;
+        color: white;
+        font-size: 1em;
+        padding: 8px 0;
+    }
+
+    .accor3_items {
+        width: 90vw;
+        margin: auto;
+        list-style-type: none;
+        height: 0px;
+        visibility: hidden;
+        transition: .3s;
+        font-family: Arial, sans-serif;
+        font-size: .8rem;
+        color: #555;
+        line-height: 1.5em;
+    }
+
+    .accor3_items.show_items {
+        height: 130px;
+        visibility: visible;
+    }
+}
+
+footer > div p:last-of-type {
+    font-size: .8em;
+    color: #555;
+    margin: 10px 0 0 10px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------*/
+
+
+.linkjes_terug {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-size: .9em;
+    margin-top: 15px;
+}
+
+.linkjes_terug li {
+    list-style-type: none;
+    font-family: Clanotnews, arial, sans-serif;
+}
+
+.linkjes_terug li a {
+    text-decoration: none;
+    color: black;
+}
+
+.linkjes_terug li a:hover {
+    text-decoration: underline;
+}
+
+.linkjes_terug li span {
+    margin: 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.productbeschrijving label {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    color: #333333;
+    line-height: 1.3em;
+    margin: 8px 0 0 0;
+}
+
+.productbeschrijving select {
+    display: block;
+     height: 3em;
+    width: 300px;
+    border: 1px solid lightgray;
+    color: #7f7f7f;
+    background-color: white;
+    font-size: .8rem;
+}
+
+.productbeschrijving select:hover {
+    border: 1px solid grey;
+    color: black;
+    cursor: pointer;
+}
+
+.productbeschrijving p:first-child {
+    margin-top: 25px;
+}
+
+
+.selectaantal {
+/*
+    display: block;
+    height: 3em;
+    width: 300px;
+    border: 1px solid lightgray;
+    color: #7f7f7f;
+    background-color: white;
+    font-size: .8rem;
+*/
+    
+    
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 12px;
+    width: 60px;
+    border-radius: 3px;
+}
+
+.selectaantal:active {
+    border: 1px solid grey;
+    color: black;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

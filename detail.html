@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Originele bedankjes > Vanaf €1 en snel geleverd - Bedankjes.nl</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo_favicon.png">
+</head>
+
+<body>
+    <!--
+   bronnen van afbeeldingen: https://www.bedankjes.nl/
+   bronnen icons: https://www.flaticon.com/
+-->
+    <header>
+        <nav>
+            <div class="nav_menuorder">
+                <div class="hamburger">
+                    <div class="hamburger_line1"></div>
+                    <div class="hamburger_line2"></div>
+                    <div class="hamburger_line3"></div>
+                </div>
+
+                <img src="img/logo_bedankjes.png" alt="" class="logo">
+
+                <img src="img/icon_shoppingcart.png" alt="" class="shopping_cart">
+            </div>
+
+            <div class="nav_catorder">
+                <ul class="navMenu2">
+                    <li>Bruiloft ▾</li>
+                    <li>Geboorte ▾</li>
+                    <li>Communie ▾</li>
+                    <li>Cadeaus ▾</li>
+                    <li>Doe het zelf! ▾</li>
+                    <li>Zakelijk ▾</li>
+                    <li>Over ons ▾</li>
+                </ul>
+                <form action="" class="zoekbalk">
+                    <input type="text" name="firstname" placeholder="Doorzoek de hele winkel">
+                </form>
+            </div>
+        </nav>
+
+        <!--       class gebruikt voor java-->
+        <nav class="menu">
+            <ul>
+                <li><a href=""><img src="img/menu_icons/menu.icon.ring.png" alt="">Bruiloft</a></li>
+                <li><a href=""><img src="img/menu_icons/menu.icon.baby.png" alt="">Geboorte</a></li>
+                <li><a href=""><img src="img/menu_icons/menu.icon.present.png" alt="">Cadeau's</a></li>
+                <li><a href=""><img src="img/menu_icons/menu.icon.communie.png" alt="">Communie</a></li>
+                <li><a href=""><img src="img/menu_icons/menu.icon.diy.png" alt="">Doe het zelf!</a></li>
+                <li><a href=""><img src="img/menu_icons/menu.icon.business.png" alt="">Zakelijk</a></li>
+                <li><a href=""><img src="img/menu_icons/menu.icon.baby.png" alt="">Over ons</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="pagewidth">
+
+            <!--                <a href="index.html" class="linkjes_terug">Startpagina</a> <a href="detail.html">/ Potje met snoepjes</a>-->
+
+            <ul class="linkjes_terug">
+                <li><a href="index.html">Startpagina</a></li>
+                <li><span>/</span></li>
+                <li><strong>Blikjes met snoep</strong></li>
+            </ul>
+
+            <div class="productbeschrijving">
+                <img src="img/detail/al563-snoepjes-v2.png" alt="">
+                <div class="product_opties">
+                    <h2>Blikje met snoepjes</h2>
+                    <p>Stoere aluminium blikken gevuld met heerlijke snoepjes. De blikjes worden voorzien van een persoonlijke etiket dat je zelf kunt ontwerpen. Kies qua vulling uit zoute drophartjes, mini spekjes of dextrose hartjes.</p>
+
+                    <label for="vulling">Kies snoepsoort</label>
+                    <select>
+                        <option value="verplicht">Selecteer...</option>
+                        <option value="pepermuntSterretjes">Pepermunt sterretjes +€0,10</option>
+                        <option value="suikerhartjes">Suikerhartjes +€0,10</option>
+                        <option value="tumtum">TumTum +€0,10</option>
+                    </select>
+
+                    <label for="doehetzelf">Als doe het zelf pakket ontvangen?</label>
+                    <p>Door het bedankje als losse onderdelen te ontvangen bespaar je handlingskosten.</p>
+                    <select>
+                        <option value="verplicht">Selecteer...</option>
+                        <option value="pepermuntSterretjes">Nee, lever maar kant en klaar +€0,25</option>
+                        <option value="suikerhartjes">Ja, als doe het zelf pakket ontvangen</option>
+                    </select>
+
+                    <div class="aantal_prijs">
+                        <label for="aantal">Aantal</label>
+                        <p>€1,95</p>
+                    </div>
+                    <input type="number" name="quantity" min="24" placeholder="24" class="selectaantal">
+                </div>
+
+
+                <form action="" method="post">
+                    <label for="ontwerp">Selecteer je ontwerp</label>
+                    <div class="ontwerpen">
+                        <section>
+                            <input type="radio" name="gender" value="male">Selecteer
+                            <img src="img/detail/15499705701122501220638249.png" alt="" class="detail_ontwerp">
+                        </section>
+
+                        <section>
+                            <input type="radio" name="gender" value="male">Selecteer
+                            <img src="img/detail/15499706441124041220867950.png" alt="" class="detail_ontwerp">
+                        </section>
+
+                        <section>
+                            <input type="radio" name="gender" value="male">Selecteer
+                            <img src="img/detail/15499710701131101221048248.png" alt="" class="detail_ontwerp">
+                        </section>
+
+                        <section>
+                            <input type="radio" name="gender" value="male">Selecteer
+                            <img src="img/detail/15499711621132421221298840.png" alt="" class="detail_ontwerp">
+                        </section>
+
+                        <section>
+                            <input type="radio" name="gender" value="male">Selecteer
+                            <img src="img/detail/1549971251113411122146937.png" alt="" class="detail_ontwerp">
+                        </section>
+
+                        <section>
+                            <input type="radio" name="gender" value="male">Selecteer
+                            <img src="img/detail/15499698151110151219049811.png" alt="" class="detail_ontwerp">
+                        </section>
+                    </div>
+                    <input type="button" value="Ontwerp &amp; bestel">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!----------------------------------- PHONE / TABLET ------------------------------------------->
+
+        <div>
+            <button class="accor1">Klantenservice</button>
+            <ul class="accor1_items">
+                <li><a href="">Contact</a></li>
+                <li><a href="">Bestellen &amp; levertijd</a></li>
+                <li><a href="">Veelgestelde vragen</a></li>
+                <li><a href="">Online ontwerptool</a></li>
+                <li><a href="">Nieuwsbrief</a></li>
+                <li><a href="">Privacy statement</a></li>
+                <li><a href="">Sitemap</a></li>
+                <li><a href="">Cookieverklaring</a></li>
+            </ul>
+            <button class="accor2">Over Bedankjes</button>
+            <ul class="accor2_items">
+                <li><a href="">Over ons</a></li>
+                <li><a href="">Meningen van klanten</a></li>
+                <li><a href="">Werken bij bedankjes.nl</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Algemene voorwaarden</a></li>
+                <li><a href="">Offerte aanvraag zakelijk</a></li>
+            </ul>
+            <button class="accor3">Bedankjes | Gifts to Connect</button>
+            <ul class="accor3_items">
+                <li>Edisonweg 30b</li>
+                <li>2952 AD Alblasserdam</li>
+                <li>Telefoon: <a href="">+31 (0)78 204 90 50</a></li>
+                <li>Algemeen: <a href="">info@bedankjes.nl</a></li>
+                <li>Voor klanten: <a href="">klantenservice@bedankjes.nl</a></li>
+            </ul>
+            <img src="img/footer/footerFacebook.png" alt="">
+            <p>&#9400; Copyright 2019 Gifts To Connect</p>
+        </div>
+
+        <!----------------------------------- DESKTOP / TABLET ------------------------------------------->
+        <section>
+            <article>
+                <h3>Klantenservice</h3>
+                <ul>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Bestellen &amp; levertijd</a></li>
+                    <li><a href="">Veelgestelde vragen</a></li>
+                    <li><a href="">Online ontwerptool</a></li>
+                    <li><a href="">Nieuwsbrief</a></li>
+                    <li><a href="">Privacy statement</a></li>
+                    <li><a href="">Sitemap</a></li>
+                    <li><a href="">Cookieverklaring</a></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Over Bedankjes</h3>
+                <ul>
+                    <li><a href="">Over ons</a></li>
+                    <li><a href="">Meningen van klanten</a></li>
+                    <li><a href="">Werken bij bedankjes.nl</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Algemene voorwaarden</a></li>
+                    <li><a href="">Offerte aanvraag zakelijk</a></li>
+                </ul>
+            </article>
+            <article>
+                <h3>Bedankjes | Gifts to Connect</h3>
+                <ul>
+                    <li>Edisonweg 30b</li>
+                    <li>2952 AD Alblasserdam</li>
+                    <li>Telefoon: <a href="">+31 (0)78 204 90 50</a></li>
+                    <li>Algemeen: <a href="">info@bedankjes.nl</a></li>
+                    <li>Voor klanten: <a href="">klantenservice@bedankjes.nl</a></li>
+                </ul>
+                <img src="img/footer/betaalmogelijkheden-bedankjes.png" alt="">
+            </article>
+            <img src="img/footer/footerFacebook.png" alt="">
+        </section>
+        <!--        <p>&#9400; Copyright 2019 Gifts To Connect</p>-->
+    </footer>
+    <script src="java.js"></script>
+</body>
+
+</html>
